@@ -2,15 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Need to name</title>
+    <title>Techstarter</title>
     <style>
+        html, body {
+            height: 100%;
+        }
         .black-table {
             width: 100%;
             border-collapse: collapse;
             background-color: black;
             color: white;
         }
-        .black-table, .black-table td {
+        .black-table th, .black-table td {
             border: 1px solid black;
             padding: 10px;
             text-align: center;
@@ -36,15 +39,17 @@
             background-color: white; /* Slightly lighter for headers */
         }
         .web-links {
-            width: 100%;
+            width: 95%;
             border-collapse: collapse;
             background-color: black;
             color: white;
+            table-layout: fixed;
+            margin: 0 auto;
+            height: 5%;
         }
         .web-links th, .web-links td {
             border: 1px solid black;
             padding: 10px;
-            border-collapse: ;
             text-align: center;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
@@ -79,13 +84,16 @@
     </table>
 </header>
 <br>
+<body>
 <table class="web-links">
     <tr>
         <td><a href="./Terms and conditions.html"><strong>Terms and conditions</strong></a></td>
         <td><a><strong>Our Team</strong></a></td>
         <td><a><strong>Contact Us</strong></a></td>
+        <td><a><strong>Our Services</strong></a></td>
     </tr>
 </table>
+</body>
 <br>
 <footer>
     <table class="black-table">
