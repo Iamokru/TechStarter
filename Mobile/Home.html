@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TechStarter</title>
+  <style>
+    .expandable_table1 {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: black;
+      color: white;
+    }
+    .expandable_table1 td {
+      border: 1px solid black;
+      padding: 10px;
+      text-align: center;
+    }
+    .details-row {
+      display: none;
+      background-color: black;
+    }
+    .expandable:hover {
+      cursor: pointer;
+      background-color: black;
+    }
+    .toggle-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .toggle-icon {
+      width: 20px;
+      height: 20px;
+    }
+    img.content-image {
+      width: 300px;
+      height: auto;
+      margin-top: 10px;
+      display: block;
+    }
+    .expandable_table1 table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: black;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<table class="expandable_table1">
+  <tr class="expandable" onclick="toggleDetails(this)">
+    <td>
+      <img src="./Menu.png" 
+           class="toggle-icon" alt="Toggle Icon">
+    </td>
+  </tr>
+  <tr class="details-row">
+    <td><a href="">Contact Us</a></td>
+  </tr>
+  <tr class="details-row">
+    <td>Email: contact@example.com</td>
+  </tr>
+  <tr class="details-row">
+    <td>Phone: (123) 456-7890</td>
+  </tr>
+</table>
+
+<script>
+  function toggleDetails(row) {
+    let next = row.nextElementSibling;
+    const icon = row.querySelector(".toggle-icon");
+    let isExpanded = next && next.style.display === "table-row";
+
+    while (next && next.classList.contains("details-row")) {
+      next.style.display = isExpanded ? "none" : "table-row";
+      next = next.nextElementSibling;
+    }
+
+    icon.src = isExpanded 
+      ? "https://iamokru.github.io/TechStarter/M/Menu.png"
+      : "https://iamokru.github.io/TechStarter/M/Close.png";
+  }
+</script>
+
+</body>
+</html>
