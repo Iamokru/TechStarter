@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <div class="pc_redirect">
+    <script>
+  function redirectNonMobile() {
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+    // Only allow phones (detected via "Mobi")
+    const isPhone = /Mobi/i.test(userAgent);
+
+    if (!isPhone) {
+      window.location.href = "../index.html"; // Change to your desired page
+    }
+  }
+
+  window.onload = redirectNonMobile;
+</script>
+  </div>
   <meta charset="UTF-8">
   <title>TechStarter</title>
   <style>
@@ -58,7 +74,7 @@
 <table class="expandable_table1">
   <tr class="expandable" onclick="toggleDetails(this)">
     <td>
-      <img src="./Menu.png" 
+      <img src="../Resources/Menu.png" 
            class="toggle-icon" alt="Toggle Icon">
     </td>
   </tr>
@@ -88,8 +104,8 @@
     }
 
     icon.src = isExpanded 
-      ? "./Menu.png"
-      : "./Close.png";
+      ? "../Resources/Menu.png"
+      : "../Resources/Close.png";
   }
 </script>
 
