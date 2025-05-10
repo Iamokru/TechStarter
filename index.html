@@ -5,15 +5,18 @@
     <title>Techstarter</title>
     <div id="mobile_redirect">
   <script>
-    // Function to detect mobile devices
-    function redirectMobile() {
-      if (/Mobi|Android/i.test(navigator.userAgent)) {
-        // If mobile device is detected, redirect to a relative path
-        window.location.href = "./Mobile/Home.html"; // Use relative path (e.g., mobile.html in the current directory)
-      }
-    }
-    // Call the function on page load
-    window.onload = redirectMobile;
+
+javascript
+Copy
+Edit
+function redirectMobile() {
+  const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+  // Match only Android and other devices that include "Mobi" (phones)
+  if (/Mobi/i.test(userAgent)) {
+    window.location.href = "./mobile.html";
+  }
+}
   </script>
     </div>
     <style>
