@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <title>Techstarter</title>
     <div id="mobile_redirect">
-  <script>
+<script>
+  function redirectPhonesOnly() {
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
-javascript
-Copy
-Edit
-function redirectMobile() {
-  const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    // Match only smartphones (not tablets or iPads)
+    const isPhone = /Mobi/i.test(userAgent);
 
-  // Match only Android and other devices that include "Mobi" (phones)
-  if (/Mobi/i.test(userAgent)) {
-    window.location.href = "./mobile.html";
+    if (isPhone) {
+      window.location.href = "./mobile.html"; // Change to your mobile version
+    }
   }
-}
-  </script>
+
+  window.onload = redirectPhonesOnly;
+</script>
     </div>
     <style>
         html, body {
