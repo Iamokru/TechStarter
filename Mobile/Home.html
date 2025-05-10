@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <h1>Remember undo the script as a comment and remove this both are at the top of head</h1>
   <div class="pc_redirect">
-    <script>
+  <!--  <script>
   function redirectNonMobile() {
     const userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
@@ -12,10 +13,10 @@
     if (!isPhone) {
       window.location.href = "../index.html"; // Change to your desired page
     }
-  }
+  } 
 
   window.onload = redirectNonMobile;
-</script>
+</script> -->
   </div>
   <meta charset="UTF-8">
   <title>TechStarter</title>
@@ -49,8 +50,8 @@
       height: 20px;
     }
     img.content-image {
-      width: 300px;
-      height: auto;
+      width: 700%;
+      height: 700%;
       margin-top: 10px;
       display: block;
     }
@@ -59,6 +60,10 @@
       border-collapse: collapse;
       background-color: black;
       color: white;
+    }
+    .toggle-icon {
+      width: 5%;
+      height: auto;
     }
     a {
             display: block;
@@ -75,7 +80,7 @@
   <tr class="expandable" onclick="toggleDetails(this)">
     <td>
       <img src="../Resources/Menu.png" 
-           class="toggle-icon" alt="Toggle Icon">
+           class="toggle-icon" alt="Toggle Icon" >
     </td>
   </tr>
   <tr class="details-row">
