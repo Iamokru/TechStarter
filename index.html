@@ -8,11 +8,10 @@
   function redirectPhonesOnly() {
     const userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
-    // Match only smartphones (not tablets or iPads)
     const isPhone = /Mobi/i.test(userAgent);
 
     if (isPhone) {
-      window.location.href = "./Mobile/Home.html"; // Change to your mobile version
+      window.location.href = "./Mobile/Home.html";
     }
   }
   
@@ -20,6 +19,12 @@
 </script>
     </div>
     <style>
+         @media (prefers-color-scheme: dark) {
+         html, body, main, section, div, p, h1, h2, h3, h4, h5, h6 {
+           background-color: white !important;
+          color: black !important;
+        }
+        }
         html, body {
             height: 100%;
         }
@@ -36,7 +41,7 @@
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
         .black-table th {
-            background-color: black; /* Slightly lighter for headers */
+            background-color: black;
         }
 
         .white-table {
@@ -52,7 +57,7 @@
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
         .white-table th {
-            background-color: white; /* Slightly lighter for headers */
+            background-color: white;
         }
         .web-links {
             width: 95%;
